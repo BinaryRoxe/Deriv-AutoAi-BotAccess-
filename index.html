@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Access RoyalRoxe$ Deriv Smart AI Bot 🤖</title>
+  <title>Access RoyalRoxe Deriv Smart AI Bot 🤖</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -28,12 +28,17 @@
     h2 {
       color: #0b72e6;
     }
-    input {
-      padding: 10px;
-      margin: 8px 0;
-      width: 80%;
-      border: 1px solid #ccc;
-      border-radius: 4px;
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    a {
+      color: #0b72e6;
+      font-weight: bold;
+      text-decoration: none;
     }
     button {
       padding: 10px 20px;
@@ -47,108 +52,29 @@
     button:hover {
       background-color: #095ab2;
     }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    ul li {margin: 10px 0;
-    }
-    a {
-      color: #0b72e6;
-      font-weight: bold;
-    }
-    #verify-message {
-      color: red;
-      margin-top: 10px;
-    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img class="logo" src="https://imgur.com/gallery/WqfEnVh" alt="Logo" />
-    <h2>🚀 Get Access to RoyalRoxe AI Bot</h2>
-    <p>To unlock, complete signup and verify your email:</p>
+  <div class="container"><img class="logo" src=z"https://imgur.com/gallery/traderhub2-WqfEnVh" alt="Logo" />
+    <h2>🤖 RoyalRoxe AutoAi Bot Access</h2>
+    <p>To access and unlock Automated Ai bots:</p>
     <ol style="text-align: left;">
       <li>✅ <a href="https://track.deriv.com/_u37maJGtrowKqFKZ7JdnQ2Nd7ZgqdRLk/1/" target="_blank">Sign up on Deriv via this link</a></li>
-      <li>📧 Enter your Deriv Email below to unlock Automated Ai bots</li>
+      <li>📧 Send your Deriv Email to <strong>+254105646844</strong> via WhatsApp to receive the bot password</li>
     </ol>
 
-    <div id="verify-section">
-      <input type="email" id="userEmail" placeholder="Your Deriv Email" required />
-      <button onclick="verifyUser()">Verify</button>
-      <p id="verify-message"></p>
-    </div>
+    <a href="https://wa.me/254105646844?text=Hi,%20I%20signed%20up%20on%20Deriv%20and%20want%20bot%20access." target="_blank">
+      <button>📲 Contact on WhatsApp</button>
+    </a>
 
-    <div id="download-links" style="display:none;">
+    <div id="download-links" style="margin-top: 30px;">
       <h3>📥 Download Bots</h3>
       <ul>
         <li><a href="https://drive.google.com/file/d/1LeUp1vWzwhhmUvn065lN0ajoT2KtWltp/view" target="_blank">Royalbeast Secret 🤖</a></li>
-        <li><a href="https://drive.google.com/file/d/179IenDtXU9DtOkW_rA-YQpZXf-3Xmvhf/view" target="_blank">Second Bot</a></li><li><a href="https://drive.google.com/file/d/1hnN8v3lvcsaiHELyD0pzn0aZgai34Hi7/view" target="_blank">Third Bot</a></li>
+        <li><a href="https://drive.google.com/file/d/179IenDtXU9DtOkW_rA-YQpZXf-3Xmvhf/view" target="_blank">Second Bot</a></li>
+        <li><a href="https://drive.google.com/file/d/1hnN8v3lvcsaiHELyD0pzn0aZgai34Hi7/view" target="_blank">Third Bot</a></li>
       </ul>
     </div>
   </div>
-<script type="module">
-  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-  import { getFirestore, doc, getDoc } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-firestore.js";
-
-  const firebaseConfig = {
-    apiKey: "AIzaSyBVCdR_HV51EL-Ii1Mslo55wiskxWyqo5U",
-    authDomain: "royalroxe-autoai-access.firebaseapp.com",
-    projectId: "royalroxe-autoai-access",
-    storageBucket: "royalroxe-autoai-access.appspot.com",
-    messagingSenderId: "384220157414",
-    appId: "1:384220157414:web:4b7672e466176342977227",
-    measurementId: "G-BGPD7M9Q7G"
-  };
-
-  const app = initializeApp(firebaseConfig);
-  const db = getFirestore(app);
-
-  async function verifyUser() {
-    const email = document.getElementById('userEmail').value.trim();
-    const crid = document.getElementById('userCRID').value.trim();
-    const messageEl = document.getElementById('verify-message');const downloadsEl = document.getElementById('download-links');
-
-    if (!email || !crid) {
-      messageEl.textContent = "Please enter both your Deriv Email and CR ID.";
-      downloadsEl.style.display = 'none';
-      return;
-    }
-
-    try {
-      const userDocRef = doc(db, "users", email);
-      const userSnap = await getDoc(userDocRef);
-
-      if (userSnap.exists()) {
-        const userData = userSnap.data();
-
-        if (userData.crId && userData.crId.toLowerCase() === crid.toLowerCase()) {
-          const createdAt = new Date(userData.createdAt);
-          const now = new Date();
-          const diffDays = Math.floor((now - createdAt) / (1000 * 60 * 60 * 24));
-
-          if (diffDays > 4) {
-            messageEl.textContent = "Access expired. Please contact support.";
-            downloadsEl.style.display = "none";
-            return;
-          }
-
-          messageEl.textContent = "";
-          downloadsEl.style.display = "block";
-        } else {
-          messageEl.textContent = "CR ID does not match our records.";
-          downloadsEl.style.display = "none";
-        }
-      } else {
-        messageEl.textContent = "No user found with this email.";
-        downloadsEl.style.display = "none";
-      }
-    } catch (error) {console.error("Error verifying user:", error);
-      messageEl.textContent = "Error verifying user. Please try again later.";
-      downloadsEl.style.display = "none";
-    }
-  }
-</script>
 </body>
-</html>   
-  
+</html>
