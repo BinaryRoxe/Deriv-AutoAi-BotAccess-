@@ -60,6 +60,16 @@
       top: 20px;
       right: 20px;
     }
+    .whatsapp-float {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: linear-gradient(45deg, #25D366, #128C7E);
+      border-radius: 50%;
+      padding: 15px;
+      cursor: pointer;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
   </style>
 </head>
 <body>
@@ -72,9 +82,6 @@
       <li>✅ <a href="https://track.deriv.com/_u37maJGtrowKqFKZ7JdnQ2Nd7ZgqdRLk/1/" target="_blank">Register on Deriv</a></li>
       <li>📧 Send your CR ID & Email to <strong>+254105646844</strong> via WhatsApp</li>
     </ol>
-    <a href="https://wa.me/254105646844?text=Hi,%20I%20signed%20up%20on%20Deriv%20and%20want%20bot%20access." target="_blank">
-      <button>📲 Get Access via WhatsApp</button>
-    </a>
     <div id="download-links" style="margin-top: 30px;">
       <h3>📥 Download Bots</h3>
       <ul>
@@ -82,12 +89,12 @@
         <li><a href="#" onclick="checkCode('Market Killer 🤖', 'https://drive.google.com/file/d/179IenDtXU9DtOkW_rA-YQpZXf-3Xmvhf/view')">Market Killer 🤖</a></li>
         <li><a href="#" onclick="checkCode('Auto Switcher 2026 🤖', 'https://drive.google.com/file/d/1hnN8v3lvcsaiHELyD0pzn0aZgai34Hi7/view')">Auto Switcher 2026 🤖</a></li>
       </ul>
-      <button onclick="window.open('https://deriv.com', '_blank')">Trade on Deriv</button>
+      <button onclick="window.open('https://deriv.com', '_blank')" style="background: linear-gradient(45deg, #8B0A1A, #6c5ce7);">Trade on Deriv</button>
     </div>
     <iframe src="https://s.tradingview.com/widgetembed/?symbol=DERIV:1HZ100V&interval=1&hidesidetoolbar=1" width="100%" height="400" frameborder="0"></iframe>
   </div>
-  <a href="https://wa.me/254105646844" target="_blank" style="position: fixed; bottom: 20px; right: 20px;">
-    <button>WhatsApp</button>
+  <a href="https://wa.me/254105646844" target="_blank" class="whatsapp-float">
+    <img src="https://cdn.icon-icons.com/icons2/840/PNG/128/Whatsapp_icon-icons.com_66931.png" width="60" alt="WhatsApp">
   </a>
 
   <script>
