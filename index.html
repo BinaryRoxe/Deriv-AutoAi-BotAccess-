@@ -2,36 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>RoyalRoxe AutoAi Bot Website platform</title>
-   <style>
+  <style>
+    :root {
+      --gold: #f5c842;
+      --neon: #00ffe1;
+      --bg-dark: #0f0f0f;
+      --bg-light: #f5f5f5;
+      --text-dark: #ffffff;
+      --text-light: #111;
+    }
+
     body {
       font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(45deg, #0f0f0f, #1c1c1c);
-      color: #f5c842;
       margin: 0;
       padding: 20px;
-      transition: background 0.5s;
+      background: var(--bg-dark);
+      color: var(--text-dark);
+      transition: background 0.5s, color 0.5s;
     }
+
+    body.light-mode {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
     .container {
-      max-width: 700px;
-      margin: 30px auto;
+      max-width: 700px;background: #25D366;
+      color: white;
+      border-radius: 50%;
+      padding: 15px;
+      font-size: 22px;
+      text-align: center;
+      text-decoration: none;
+      z-index: 1000;
+    }
+
+    input.code-input {
+      padding: 10px;
+      width: 70%;
+      margin: 15px auto;
+      border-radius: 4px;
+      border: none;
+      text-align: center;
+    }
+
+    iframe {
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px var(--neon);
+    }
+  </style>
+</head>
+<body>
+  <div id="theme-toggle" onclick="toggleTheme()" title="Toggle Theme"></div>
+  <div class="container">
+    <h2>🤖 RoyalRoxe AutoAI Bot Access</h2>
+    <p>To access and unlock Automated AI Bots:</p>
+    <ol style="text-align: left;">
+      <li>✅ <a href="https://track.deriv.com/_u37maJGtrowKqFKZ7JdnQ2Nd7ZgqdRLk/1/" target="_blank">Sign up on Deriv</a></li>
+      <li>📧 Send your Deriv CR ID & Email to <strong>+254105646844</strong> via WhatsApp to get bot access.</li>
+    </ol>
+
+    <a href="https://wa.me/254105646844?text=Hi,%20I%20signed%20up%20and%20want%20bot%20access." target="_blank">
+      <button>📲 Contact on WhatsApp</button>
+    </a>
+
+    <a href="https://deriv.com" target="_blank"><button>🌐 Go to Deriv Platform</button></a>margin: auto;
       background: #1c1c1c;
       padding: 30px;
       border-radius: 10px;
-      box-shadow: 0 0 15px #00ffe1;
+      box-shadow: 0 0 15px var(--neon);
       text-align: center;
     }
+
+    body.light-mode .container {
+      background: #fff;
+      box-shadow: 0 0 10px #ccc;
+    }
+
     h2 {
-      color: #ffd700;
+      color: var(--gold);
+      animation: glow 2s ease-in-out infinite alternate;
     }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 5px var(--neon); }
+      to { text-shadow: 0 0 15px var(--neon); }
+    }
+
     a {
-      color: #00ffe1;
-      font-weight: bold;
+      color: var(--neon);
       text-decoration: none;
+      font-weight: bold;
     }
+
     button {
-      background: linear-gradient(45deg, #ffd700, #00ffe1);
+      background: linear-gradient(45deg, var(--gold), var(--neon));
       color: #000;
       border: none;
       padding: 12px 20px;
@@ -40,90 +108,60 @@
       cursor: pointer;
       margin-top: 10px;
     }
+
     button:hover {
       opacity: 0.9;
     }
-    ul {
-      list-style: none;
-      padding: 0;
-    }
-    ul li {
-      margin: 10px 0;
-    }
+
+    ul { list-style: none; padding: 0; }
+    ul li { margin: 10px 0; }
+
     #theme-toggle {
-      position: absolute;
+      position: fixed;
       top: 20px;
       right: 20px;
-      width: 20px;
-      height: 20px;
+      width: 25px;
+      height: 25px;
       border-radius: 50%;
       background: linear-gradient(45deg, #007bff, #fff, #2ecc71);
       cursor: pointer;
+      z-index: 999;
     }
+
     .whatsapp-float {
       position: fixed;
-      bottom: 17px;
-      right: 17px;
-      background: #808080;
-      border-radius: 50%;
-      padding: 5px;
-      cursor: pointer;
-      box-shadow: 0 0 10px rgba(0,0,0,0.2);
-    }
-    .tradingview-box {
-      margin-top: 20px;
-      padding: 20px;
-      border: 1px solid #333;
-      border-radius: 10px;
-      background: #222;
-    }
-  </style>
-</head>
-<body>
-  <button id="theme-toggle" onclick="toggleTheme()"></button>
-  <div class="container">
-    <h2>🤖 RoyalRoxe AutoAi Bot Access</h2>
-    <p>📈 To Access and unlock automated trading Robots:</p>
-    <ol style="text-align: left; color: #fff;">
-      <li>✅ <a href="https://track.deriv.com/_u37maJGtrowKqFKZ7JdnQ2Nd7ZgqdRLk/1/" target="_blank">Sign up on Deriv via this link</a></li>
-      <li>📧 Send your Deriv CR ID & Email via Contact below for quick activation to Access Autotrading Robots👾</li>
-    </ol>
-    <a href="https://wa.me/254105646844?text=Hi boss,%20I%20signed%20up my account%20on%20Deriv via broker link provided%20and%20want%20bot%20Access." target="_blank">
-      <button>📲 Contact on Whatsapp</button>
-    </a>
-    <div id="download-links" style="margin-top: 30px;">
-      <h3>📥 Access Bots now⬇️</h3>
-      <ul>
-        <li><a href="#" onclick="checkCode('Royalbeast the Secret 🤖', 'https://drive.google.com/file/d/1LeUp1vWzwhhmUvn065lN0ajoT2KtWltp/view')">Royalbeast the Secret 🤖</a></li>
-        <li><a href="#" onclick="checkCode('Market Killer 🤖', 'https://drive.google.com/file/d/179IenDtXU9DtOkW_rA-YQpZXf-3Xmvhf/view')">Market Killer 🤖</a></li>
-        <li><a href="#" onclick="checkCode('Auto Switcher 2026 🤖', 'https://drive.google.com/file/d/1hnN8v3lvcsaiHELyD0pzn0aZgai34Hi7/view')">Auto Switcher 2026 🤖</a></li>
-      </ul>
-      <button onclick="window.open('https://deriv.com', '_blank')" style="background: linear-gradient(45deg, #8B0A1A, #6c5ce7); font-weight: bold;">Trade on Deriv</button>
-    </div>
-    <div class="tradingview-box">
-      </select>
-      <iframe src="https://charts.deriv.com/" width="100%" height="470" frameborder="1"></iframe>
-    </div>
+      bottom: 20px;
+      right: 20px;<h3 style="margin-top:40px;">📥 Download Bots (Enter Access Code)</h3>
+    <input class="code-input" id="accessCode" placeholder="Enter Code e.g. RB2026"/>
+
+    <ul>
+      <li><a href="#" onclick="unlockLink('1LeUp1vWzwhhmUvn065lN0ajoT2KtWltp')">• Royalbeast Secret 🤖</a></li>
+      <li><a href="#" onclick="unlockLink('179IenDtXU9DtOkW_rA-YQpZXf-3Xmvhf')">• Market Killer 🤖</a></li>
+      <li><a href="#" onclick="unlockLink('1hnN8v3lvcsaiHELyD0pzn0aZgai34Hi7')">• Auto Swicher2026 🤖</a></li>
+    </ul>
+
+    <h3>📊 Live Market Chart</h3>
+    <iframe src="https://www.tradingview.com/widgetembed/?frameElementId=tradingview_1&symbol=VOLATILITY:VIX&interval=1&hidesidetoolbar=1&symboledit=1&saveimage=1&toolbarbg=F1F3F6&studies=[]&theme=dark&style=1&timezone=Africa%2FNairobi" width="100%" height="400" frameborder="0" allowfullscreen></iframe>
+
+    <footer style="margin-top:40px; color: var(--gold); font-size: 14px;">
+      © 2026 RoyalRoxe Bots. All rights reserved.
+    </footer>
   </div>
-  <a href="https://wa.me/254105646844" target="_blank" class="whatsapp-float">
-    <img src="https://cdn.icon-icons.com/icons2/840/PNG/128/Whatsapp_icon-icons.com_66931.png" width="30" alt="WhatsApp">
-  </a>
+
+  <a href="https://wa.me/254105646844" class="whatsapp-float" target="_blank">💬</a>
 
   <script>
-    function checkCode(botName, link) {
-      const code = prompt('Enter access code:');
-      if (code === 'RB2026') {
-        window.open(link, '_blank');
-      } else {
-        alert('Incorrect code! Please contact support.');
+    function unlockLink(fileId) {
+      const code = document.getElementById('accessCode').value;
+      if(code === 'RB2026') {
+        window.open(`https://drive.google.com/file/d/${fileId}/view`, '_blank');} else {
+        alert("❌ Invalid Access Code. Please contact admin for access.");
       }
     }
+
     function toggleTheme() {
-      document.body.style.background = document.body.style.background === 'linear-gradient(45deg, #0f0f0f, #1c1c1c)' ? 'linear-gradient(45deg, #f0f0f0, #ccc)' : 'linear-gradient(45deg, #0f0f0f, #1c1c1c)';
-    }
-    function changeMarket(market) {
-      document.getElementById('tradingview').src = `https://charts.deriv.com/widgetembed/?symbol=${market}&interval=1&hidesidetoolbar=1&theme=dark blue &studies=candle`;
+      document.body.classList.toggle('light-mode');
     }
   </script>
 </body>
-</html> 
+</html>
