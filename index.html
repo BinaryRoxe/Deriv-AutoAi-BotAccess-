@@ -117,10 +117,6 @@
       0% { transform: translate(-50%, -50%) rotate(0deg); }
       100% { transform: translate(-50%, -50%) rotate(360deg); }
     }
-    body[style*="linear-gradient(45deg, #ADD8E6, #87CEEB"] .container {
-      background: #f0f0f0;
-      box-shadow: 0 0 15px #007bff;
-    }
   </style>
 </head>
 <body>
@@ -129,7 +125,7 @@
   <div class="container">
     <h2>🤖 RoyalRoxe AutoAi Bot Access</h2>
     <p>📈 To Access and unlock automated trading Robots:</p>
-    <ol style="text-align: left; color: #fff;">
+    <ol style="text-align: left;">
       <li>✅ <a href="https://track.deriv.com/_u37maJGtrowKqFKZ7JdnQ2Nd7ZgqdRLk/1/" target="_blank">Sign up on Deriv via this link</a></li>
       <li>📧 Send your Deriv CR ID & Email via Contact below for quick activation to Access Autotrading Robots👾</li>
     </ol>
@@ -153,6 +149,14 @@
     <img src="https://cdn.icon-icons.com/icons2/840/PNG/128/Whatsapp_icon-icons.com_66931.png" width="30" alt="WhatsApp">
   </a>
   <script>
+    let themeIndex = 0;
+    const themes = [
+      { bg: 'linear-gradient(45deg, #ffffff, #f0f0f0)', color: '#333' },
+      { bg: 'linear-gradient(45deg, #ADD8E6, #87CEEB)', color: '#333' },
+      { bg: 'linear-gradient(45deg, #2ecc71, #1abc9c)', color: '#fff' },
+      { bg: 'linear-gradient(45deg, #2c3e50, #34495e)', color: '#f5c842' }
+    ];
+
     function checkCode(botName, link) {
       const code = prompt('Enter access code:');
       if (code === 'RB2026') {
@@ -161,26 +165,21 @@
         alert('Incorrect code! Please contact support.');
       }
     }
-    let themeIndex = 0;
-const themes = [
-  { bg: 'linear-gradient(45deg, #ffffff, #f0f0f0)', color: '#333' },
-  { bg: 'linear-gradient(45deg, #ADD8E6, #87CEEB)', color: '#333' },
-  { bg: 'linear-gradient(45deg, #2ecc71, #1abc9c)', color: '#fff' },
-  { bg: 'linear-gradient(45deg, #2c3e50, #34495e)', color: '#f5c842' }
-];
-
-function toggleTheme() {
-  themeIndex = (themeIndex + 1) % themes.length;
-  const theme = themes[themeIndex];
-  document.body.style.background = theme.bg;
-  document.body.style.color = theme.color;
-}
-function changeMarket(market) {
-   document.getElementById('tradingview').src = `https://charts.deriv.com/widgetembed/?symbol=${market}&interval=1&hidesidetoolbar=1&theme=dark blue &studies=candle`;
+    function toggleTheme() {
+      themeIndex = (themeIndex + 1) % themes.length;
+      const theme = themes[themeIndex];
+      document.body.style.background = theme.bg;
+      document.body.style.color = theme.color;
+      document.querySelectorAll('ol li').forEach(li => {
+        li.style.color = theme.color;
+      });
+    }
+    function changeMarket(market) {
+      document.getElementById('tradingview').src = `https://charts.deriv.com/widgetembed/?symbol=${market}&interval=1&hidesidetoolbar=1&theme=dark blue &studies=candle`;
     }
     window.onload = function() {
       document.getElementById('loader').style.display = 'none';
     }
   </script>
 </body>
-</html>
+</html> 
