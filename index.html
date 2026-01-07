@@ -148,7 +148,7 @@
     let themeIndex = 0;
     const themes = [
       { bg: 'linear-gradient(45deg, #ffffff, #f0f0f0)', color: '#333' },
-      { bg: 'linear-gradient(45deg, #2c3e50, #34495e)', color: '#f5c842' },
+      { bg: 'linear-gradient(45deg, #000, #111)', color: '#f5c842' },
       { bg: 'linear-gradient(45deg, #8B0A1A, #6c5ce7, #00ffe1)', color: '#fff' }
     ];
 
@@ -170,12 +170,6 @@
         li.style.color = theme.color;
       });
     }
-    function changeMarket(market) {
-      document.getElementById('tradingview').src = `https://charts.deriv.com/widgetembed/?symbol=${market}&interval=1&hidesidetoolbar=1&theme=dark blue &studies=candle`;
-    }
-    window.onload = function() {
-      document.getElementById('loader').style.display = 'none';
-    }
   </script>
 </body>
-</html> 
+</html>
